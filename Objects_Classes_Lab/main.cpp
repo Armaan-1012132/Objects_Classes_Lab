@@ -10,28 +10,28 @@ private:
     double balance;
 
 public:
-    // Default constructor
+ 
     BankAccount() : accountNum("N/A"), holderName("Unknown"), balance(0.0) {}
 
-    // Parameterized constructor
+
     BankAccount(string accNum, string holder, double bal)
         : accountNum(accNum), holderName(holder), balance(bal) {}
 
-    // Getters
+  
     string getAccountNum() const { return accountNum; }
     string getholderName() const { return holderName; }
     double getBalance() const { return balance; }
 
-    // Setter
+
     void setholderName(string newName) { holderName = newName; }
 
-    // Deposit
+
     void deposit(double amount) {
         if (amount > 0) balance += amount;
         else cout << "Invalid deposit amount!!\n";
     }
 
-    // Withdraw
+
     void withdraw(double amount) {
         if (amount > balance) cout << "Insufficient funds!!\n";
         else if (amount <= 0) cout << "Invalid withdraw amount!!\n";
